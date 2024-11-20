@@ -7,6 +7,12 @@ parameters:
     customRulesetUsed: true
     errorFormat: crossRepoUnusedPublic
 
+    excludePaths:
+        # ignore common unrelated folders to speedup
+        - */.github/*
+        - */node_modules/*
+        - */vendor/*
+
 services:
     errorFormatter.crossRepoUnusedPublic:
         class: staabm\CrossRepoUnusedPublic\Recorder\ErrorFormatter
