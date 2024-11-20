@@ -16,7 +16,7 @@ for ($i = 2; $i < count($argv); $i++) {
 $cmd =
     realpath(__DIR__.'/../vendor/bin/phpstan')
     .' analyze '. escapeshellarg($argv[1])
-    .' --configuration '. escapeshellarg(realpath(__DIR__.'/../cross-repo-unused-methods-recorder.neon'))
+    .' --configuration '. escapeshellarg(realpath(__DIR__ . '/../config/recorder.neon'))
     .' '. implode(' ', $moreOptions)
 ;
 $output = \staabm\CrossRepoUnusedPublic\execCmd($cmd, $stderrOutput, $exitCode);

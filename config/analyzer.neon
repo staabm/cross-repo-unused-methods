@@ -1,0 +1,8 @@
+includes:
+    - unused-public-params.neon
+    - unused-public-services.neon
+    - unused-public-collectors.neon
+    - unused-public-rules.neon
+
+parameters:
+    customRulesetUsed: true
