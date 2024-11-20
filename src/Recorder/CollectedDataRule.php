@@ -56,13 +56,18 @@ class CollectedDataRule implements \PHPStan\Rules\Rule
     {
         $errors = [];
         foreach(self::USAGE_COLLECTORS as $collector) {
+            $collectedData = [];
             foreach ($node->get($collector) as $data) {
                 foreach($data as $rows) {
-                    $errors[] = RuleErrorBuilder::message('CollectorData')
-                        ->identifier('crossRepoUnusedMethods.collectorData')
-                        ->metadata([$collector => $rows])->build();
+                    foreach($rows as $row) {
+                        $collectedData[] = $row;
+                    }
                 }
             }
+
+            $errors[] = RuleErrorBuilder::message('CollectorData')
+                ->identifier('crossRepoUnusedMethods.collectorData')
+                ->metadata([$collector => array_values(array_unique($collectedData))])->build();
         }
 
         return $errors;
