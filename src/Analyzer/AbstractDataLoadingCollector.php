@@ -24,6 +24,14 @@ abstract class AbstractDataLoadingCollector implements Collector
 
     public function processNode(Node $node, Scope $scope): ?array
     {
+        static $once = [];
+
+        $myClass = get_class($this);
+        if (array_key_exists($myClass, $once)) {
+            return [];
+        }
+        $once[$myClass] = true;
+
         $file = dirname(__DIR__, 2) . '/recording.txt';
 
         $contents = file_get_contents($file);
@@ -32,7 +40,6 @@ abstract class AbstractDataLoadingCollector implements Collector
         }
 
         $json = Json::decode($contents, true);
-        $myClass = get_class($this);
 
         return $json['data'][$myClass] ?? null;
     }
