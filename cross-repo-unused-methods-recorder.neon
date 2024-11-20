@@ -17,6 +17,7 @@ parameters:
         - */.github/*
         - */node_modules/*
         - */vendor/*
+        - */tests/*
 
 services:
     errorFormatter.crossRepoUnusedPublic:
