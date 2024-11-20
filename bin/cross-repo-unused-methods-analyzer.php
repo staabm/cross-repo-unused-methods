@@ -1,9 +1,22 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
-require __DIR__ .'/../src/functions.php';
+if (!isset($argv[1])) {
+    fwrite(STDERR, 'Please provide the path to the project you want to analyze');
+    exit(1);
+}
 
-$cmd = __DIR__.'/../vendor/bin/phpstan analyze -c '. realpath(__DIR__.'/../cross-repo-unused-methods-analyzer.neon') .' '. realpath(__DIR__.'/empty.php') .' --debug --xdebug';
+require_once __DIR__.'/../vendor/autoload.php';
+
+$cmd =
+        realpath(__DIR__.'/../vendor/bin/phpstan')
+        .' analyze '. escapeshellarg($argv[1])
+        .' --configuration '. realpath(__DIR__.'/../cross-repo-unused-methods-analyzer.neon')
+        .'
+        --autoload-file '. realpath(__DIR__.'/bootstrap-fake-collectors.php')
+        // . ' --debug --xdebug'
+;
+
 $output = \staabm\CrossRepoUnusedPublic\execCmd($cmd, $stderrOutput, $exitCode);
 
 echo $output;

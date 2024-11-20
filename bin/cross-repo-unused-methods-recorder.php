@@ -6,9 +6,15 @@ if (!isset($argv[1])) {
     exit(1);
 }
 
-require __DIR__ .'/../src/functions.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-$cmd = realpath(__DIR__.'/../vendor/bin/phpstan'). ' analyze -c '. realpath(__DIR__.'/../cross-repo-unused-methods-recorder.neon') .' '. escapeshellarg($argv[1]) . ' --debug --xdebug';
+$cmd =
+    realpath(__DIR__.'/../vendor/bin/phpstan')
+    .' analyze '. escapeshellarg($argv[1])
+    .' --configuration '. realpath(__DIR__.'/../cross-repo-unused-methods-recorder.neon')
+    .' '
+    // . ' --debug --xdebug'
+;
 $output = \staabm\CrossRepoUnusedPublic\execCmd($cmd, $stderrOutput, $exitCode);
 
 echo $output;

@@ -18,10 +18,11 @@
     ],
     "require": {
         "php": "^7.4 || ^8.0",
+        "nette/robot-loader": "^4.0",
+        "nette/utils": "^4.0",
         "phpstan/phpstan": "^1.0",
-        "tomasvotruba/unused-public": "^1.0",
-		"nette/utils": "^4.0"
-	},
+        "tomasvotruba/unused-public": "^1.0"
+    },
     "require-dev": {
         "php-parallel-lint/php-parallel-lint": "^1.4",
         "phpstan/phpstan-strict-rules": "^1.0",
@@ -31,8 +32,8 @@
         "psr-4": {
             "staabm\\CrossRepoUnusedPublic\\": "src/"
         },
-		"classmap": [
-			"src/Analyzer/FakeCollectors/"
+		"files": [
+			"src/functions.php"
 		]
     },
     "scripts": {
