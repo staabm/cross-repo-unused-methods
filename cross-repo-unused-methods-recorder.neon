@@ -7,6 +7,10 @@ parameters:
     customRulesetUsed: true
     errorFormat: crossRepoUnusedPublic
 
+    fileExtensions:
+        - php
+        - phtml
+
     excludePaths:
         # ignore common unrelated folders to speedup
         - */.github/*
