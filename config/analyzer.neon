@@ -11,3 +11,6 @@ parameters:
         # ignore common unrelated folders to speedup
         - */node_modules/*
         - */vendor/*
+
+    bootstrapFiles:
+        - ../src/Analyzer/bootstrap-fake-collectors.php

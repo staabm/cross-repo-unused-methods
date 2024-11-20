@@ -16,8 +16,7 @@ for ($i = 2; $i < count($argv); $i++) {
 $cmd =
     realpath(__DIR__.'/../vendor/bin/phpstan')
     .' analyze '. escapeshellarg($argv[1])
-    .' --configuration '. escapeshellarg(realpath(__DIR__ . '/../config/analyzer.neon'))
-    .' --autoload-file '. escapeshellarg(realpath(__DIR__ . '/../src/Analyzer/bootstrap-fake-collectors.php'))
+    .' --configuration '. escapeshellarg(realpath(__DIR__ . '/../../php-clxproductnet/phpstan-unused.neon.dist'))
     .' '. implode(' ', $moreOptions)
 ;
 $output = \staabm\CrossRepoUnusedPublic\execCmd($cmd, $stderrOutput, $exitCode);
