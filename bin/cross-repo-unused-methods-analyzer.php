@@ -12,7 +12,7 @@ $cmd =
     realpath(__DIR__.'/../vendor/bin/phpstan')
     .' analyze '. escapeshellarg($argv[1])
     .' --configuration '. escapeshellarg(realpath(__DIR__.'/../cross-repo-unused-methods-analyzer.neon'))
-    .' --autoload-file '. escapeshellarg(realpath(__DIR__.'/bootstrap-fake-collectors.php'))
+    .' --autoload-file '. escapeshellarg(realpath(__DIR__ . '/../src/Analyzer/bootstrap-fake-collectors.php'))
     //.' --debug'
     //.' --xdebug'
 ;
