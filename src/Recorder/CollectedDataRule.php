@@ -31,7 +31,7 @@ use function in_array;
  */
 class CollectedDataRule implements \PHPStan\Rules\Rule
 {
-    public const COLLECTORS = [
+    public const USAGE_COLLECTORS = [
         MethodCallCollector::class,
         MethodCallableCollector::class,
         StaticMethodCallCollector::class,
@@ -39,9 +39,9 @@ class CollectedDataRule implements \PHPStan\Rules\Rule
         AttributeCallableCollector::class,
         CallUserFuncCollector::class,
         ClassConstFetchCollector::class,
-        PublicClassLikeConstCollector::class,
-        PublicClassMethodCollector::class,
-        PublicPropertyCollector::class,
+        // PublicClassLikeConstCollector::class,
+        // PublicClassMethodCollector::class,
+        // PublicPropertyCollector::class,
         PublicPropertyFetchCollector::class,
         PublicStaticPropertyFetchCollector::class,
         FormTypeClassCollector::class,
@@ -55,7 +55,7 @@ class CollectedDataRule implements \PHPStan\Rules\Rule
     public function processNode(Node $node, Scope $scope): array
     {
         $errors = [];
-        foreach(self::COLLECTORS as $collector) {
+        foreach(self::USAGE_COLLECTORS as $collector) {
             foreach ($node->get($collector) as $data) {
                 foreach($data as $rows) {
                     $errors[] = RuleErrorBuilder::message('CollectorData')
