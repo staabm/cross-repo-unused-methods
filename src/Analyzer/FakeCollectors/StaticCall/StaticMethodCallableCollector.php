@@ -16,7 +16,7 @@ use TomasVotruba\UnusedPublic\ClassTypeDetector;
 use TomasVotruba\UnusedPublic\Configuration;
 
 /**
- * @implements AbstractDataLoadingCollector<StaticMethodCallableNode, non-empty-array<string>|null>
+ * @extends AbstractDataLoadingCollector<StaticMethodCallableNode, non-empty-array<string>|null>
  */
 final class StaticMethodCallableCollector extends AbstractDataLoadingCollector
 {}

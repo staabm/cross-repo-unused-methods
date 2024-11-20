@@ -18,7 +18,7 @@ use TomasVotruba\UnusedPublic\Configuration;
 use TomasVotruba\UnusedPublic\ValueObject\ClassAndMethodArrayExprs;
 
 /**
- * @implements AbstractDataLoadingCollector<AttributeGroup, non-empty-array<string>|null>
+ * @extends AbstractDataLoadingCollector<AttributeGroup, non-empty-array<string>|null>
  */
 final class AttributeCallableCollector extends AbstractDataLoadingCollector
 {}

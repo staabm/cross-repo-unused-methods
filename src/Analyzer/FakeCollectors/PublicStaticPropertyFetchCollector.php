@@ -16,7 +16,7 @@ use TomasVotruba\UnusedPublic\ClassTypeDetector;
 use TomasVotruba\UnusedPublic\Configuration;
 
 /**
- * @implements AbstractDataLoadingCollector<StaticPropertyFetch, non-empty-array<string>|null>
+ * @extends AbstractDataLoadingCollector<StaticPropertyFetch, non-empty-array<string>|null>
  */
 final class PublicStaticPropertyFetchCollector extends AbstractDataLoadingCollector
 {}

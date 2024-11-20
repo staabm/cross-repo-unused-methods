@@ -15,7 +15,7 @@ use TomasVotruba\UnusedPublic\Configuration;
 
 /**
  * Match Symfony data_class element in forms types, as those use magic setters/getters
- * @implements AbstractDataLoadingCollector<ArrayItem, non-empty-array<string>|null>
+ * @extends AbstractDataLoadingCollector<ArrayItem, non-empty-array<string>|null>
  */
 final class FormTypeClassCollector extends AbstractDataLoadingCollector
 {}
