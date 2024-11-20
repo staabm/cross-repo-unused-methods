@@ -43,7 +43,9 @@ final class ErrorFormatter implements \PHPStan\Command\ErrorFormatter\ErrorForma
             }
         }
 
-        // XXX could make data unique
+        foreach($json as $collectorClass => $data) {
+            $json[$collectorClass] = array_values(array_unique($data));
+        }
 
         $output->writeRaw(Json::encode([
             'data' => $json,
