@@ -10,7 +10,9 @@ use Nette\Utils\Json;
 use PHPStan\ShouldNotHappenException;
 
 final class ErrorFormatter implements \PHPStan\Command\ErrorFormatter\ErrorFormatter {
-    public function __construct(private RelativePathHelper $relativePathHelper, private TableErrorFormatter $tableErrorFormatter)
+    public function __construct(
+        private TableErrorFormatter $tableErrorFormatter
+    )
     {
     }
 

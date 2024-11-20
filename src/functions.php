@@ -2,6 +2,8 @@
 
 namespace staabm\CrossRepoUnusedPublic;
 
+use Exception;
+
 /**
  * @param string $stderrOutput
  * @param int $exitCode

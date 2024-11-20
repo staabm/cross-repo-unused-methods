@@ -19,10 +19,10 @@ abstract class AbstractDataLoadingCollector implements Collector
 {
     public function getNodeType() : string
     {
-        return FileNode::class;
+        return FileNode::class; // @phpstan-ignore return.type
     }
 
-    public function processNode(Node $node, Scope $scope): ?array
+    public function processNode(Node $node, Scope $scope): ?array // @phpstan-ignore-line
     {
         static $once = [];
 
@@ -41,7 +41,7 @@ abstract class AbstractDataLoadingCollector implements Collector
 
         $json = Json::decode($contents, true);
 
-        return $json['data'][$myClass] ?? null;
+        return $json['data'][$myClass] ?? null; // @phpstan-ignore-line
     }
 
 }

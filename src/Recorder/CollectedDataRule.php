@@ -59,6 +59,10 @@ class CollectedDataRule implements \PHPStan\Rules\Rule
             $collectedData = [];
             foreach ($node->get($collector) as $data) {
                 foreach($data as $rows) {
+                    if (!is_array($rows)) {
+                        throw new ShouldNotHappenException();
+                    }
+
                     foreach($rows as $row) {
                         $collectedData[] = $row;
                     }
