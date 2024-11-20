@@ -11,9 +11,9 @@ require_once __DIR__.'/../vendor/autoload.php';
 $cmd =
     realpath(__DIR__.'/../vendor/bin/phpstan')
     .' analyze '. escapeshellarg($argv[1])
-    .' --configuration '. realpath(__DIR__.'/../cross-repo-unused-methods-recorder.neon')
-    .' '
-    // . ' --debug --xdebug'
+    .' --configuration '. escapeshellarg(realpath(__DIR__.'/../cross-repo-unused-methods-recorder.neon'))
+    //.' --debug'
+    //.' --xdebug'
 ;
 $output = \staabm\CrossRepoUnusedPublic\execCmd($cmd, $stderrOutput, $exitCode);
 
