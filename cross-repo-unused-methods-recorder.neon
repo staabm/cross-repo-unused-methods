@@ -2,6 +2,7 @@ includes:
     - src/unused-public-params.neon
     - src/unused-public-services.neon
     - src/unused-public-collectors.neon
+    # src/unused-public-rules.neon intentionally left out as we are just recording collector data
 
 parameters:
     customRulesetUsed: true
