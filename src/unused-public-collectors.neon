@@ -1,0 +1,65 @@
+services:
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\PublicClassMethodCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\MethodCall\MethodCallCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\MethodCall\MethodCallableCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\StaticCall\StaticMethodCallCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\StaticCall\StaticMethodCallableCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\FormTypeClassCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\PublicStaticPropertyFetchCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\PublicClassLikeConstCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\ClassConstFetchCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\PublicPropertyCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\PublicPropertyFetchCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\Callable_\AttributeCallableCollector
+        tags:
+            - phpstan.collector
+
+    -
+        class: TomasVotruba\UnusedPublic\Collectors\Callable_\CallUserFuncCollector
+        tags:
+            - phpstan.collector

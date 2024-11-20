@@ -1,0 +1,18 @@
+includes:
+    - phar://phpstan.phar/conf/bleedingEdge.neon
+    - src/unused-public-params.neon
+    - src/unused-public-services.neon
+    - src/unused-public-collectors.neon
+
+parameters:
+    customRulesetUsed: true
+    errorFormat: crossRepoUnusedPublic
+
+services:
+    errorFormatter.crossRepoUnusedPublic:
+        class: staabm\CrossRepoUnusedPublic\Recorder\ErrorFormatter
+        arguments:
+            relativePathHelper: @simpleRelativePathHelper
+
+rules:
+    - staabm\CrossRepoUnusedPublic\Recorder\CollectedDataRule

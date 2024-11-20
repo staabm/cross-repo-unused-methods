@@ -1,0 +1,16 @@
+parametersSchema:
+    unused_public: structure([
+        methods: anyOf(bool(), int(), float())
+        local_methods: bool()
+        properties: bool()
+        constants: bool()
+        template_paths: listOf(string())
+    ])
+
+parameters:
+    unused_public:
+        methods: true
+        local_methods: false
+        properties: true
+        constants: true
+        template_paths: []
