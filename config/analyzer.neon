@@ -6,3 +6,8 @@ includes:
 
 parameters:
     customRulesetUsed: true
+
+    excludePaths:
+        # ignore common unrelated folders to speedup
+        - */node_modules/*
+        - */vendor/*

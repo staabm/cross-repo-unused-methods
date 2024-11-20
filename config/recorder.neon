@@ -14,10 +14,8 @@ parameters:
 
     excludePaths:
         # ignore common unrelated folders to speedup
-        - */.github/*
         - */node_modules/*
         - */vendor/*
-        - */tests/*
 
 services:
     errorFormatter.crossRepoUnusedPublic:
