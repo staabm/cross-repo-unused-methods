@@ -1,53 +1,49 @@
 {
-    "name": "staabm/cross-repo-unused-methods",
-    "type": "phpstan-extension",
-    "license": "MIT",
-    "keywords": [
-        "dev",
-        "phpstan",
-        "phpstan-extension",
-        "static analysis"
-    ],
-    "keywords": [
-        "dev",
-        "phpstan",
-        "phpstan-extension",
-        "static analysis",
-        "database access layer",
-        "code quality"
-    ],
-    "require": {
-        "php": "^7.4 || ^8.0",
-        "nette/robot-loader": "^4.0",
-        "nette/utils": "^4.0",
-        "phpstan/phpstan": "^1.0",
-        "tomasvotruba/unused-public": "^1.0"
-    },
-    "require-dev": {
-        "php-parallel-lint/php-parallel-lint": "^1.4",
-        "phpstan/phpstan-strict-rules": "^1.0",
-        "phpunit/phpunit": "^8.5|^9.5"
-    },
-    "autoload": {
-        "psr-4": {
-            "staabm\\CrossRepoUnusedPublic\\": "src/"
-        },
+	"name": "staabm/cross-repo-unused-methods",
+	"description": "Finds unused public code across repositories",
+	"type": "phpstan-extension",
+	"license": "MIT",
+	"keywords": [
+		"dev",
+		"phpstan",
+		"phpstan-extension",
+		"static analysis"
+	],
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"nette/robot-loader": "^4.0",
+		"nette/utils": "^4.0",
+		"phpstan/phpstan": "^1.0",
+		"tomasvotruba/unused-public": "^1.0"
+	},
+	"require-dev": {
+		"php-parallel-lint/php-parallel-lint": "^1.4",
+		"phpstan/phpstan-strict-rules": "^1.0",
+		"phpunit/phpunit": "^8.5|^9.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"staabm\\CrossRepoUnusedPublic\\": "src/"
+		},
 		"files": [
 			"src/functions.php"
 		]
-    },
-    "scripts": {
-        "csfix": [
-            "vendor/bin/ecs --ansi --fix"
-        ],
-        "phpunit": [
-            "phpunit"
-        ],
-        "phpstan": [
-            "phpstan analyse -c phpstan.neon.dist"
-        ]
-    },
-    "config": {
-        "sort-packages": true
-    }
+	},
+	"scripts": {
+		"csfix": [
+			"vendor/bin/ecs --ansi --fix"
+		],
+		"phpunit": [
+			"phpunit"
+		],
+		"phpstan": [
+			"phpstan analyse -c phpstan.neon.dist"
+		]
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"bin": [
+		"bin/merge-recordings"
+	]
 }
