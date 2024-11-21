@@ -3,7 +3,22 @@
 
 use Nette\Utils\Json;
 
-require_once __DIR__.'/../vendor/autoload.php';
+// Finding composer
+
+$paths = [
+    __DIR__.'/../vendor/autoload.php',
+    __DIR__.'/../../../autoload.php',
+];
+
+foreach ($paths as $path) {
+    if (file_exists($path)) {
+        include $path;
+        break;
+    }
+}
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'stderr');
 
 if (!isset($argv[1]) || !isset($argv[2])) {
     fwrite(STDERR, 'Please provide at least 2 path to be merged');
