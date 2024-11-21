@@ -32,7 +32,17 @@ abstract class AbstractDataLoadingCollector implements Collector
         }
         $once[$myClass] = true;
 
-        $file = dirname(__DIR__, 2) . '/recording.json';
+        $paths = [
+            dirname(__DIR__, 4) . '/recording.json', // the consuming projct root
+            dirname(__DIR__, 2) . '/recording.json', // this projects root
+        ];
+
+        $file = null;
+        foreach($paths as $file) {
+            if (file_exists($file)) {
+                break;
+            }
+        }
 
         $contents = file_get_contents($file);
         if ($contents === false) {
