@@ -36,7 +36,7 @@ abstract class AbstractDataLoadingCollector implements Collector
 
         $contents = file_get_contents($file);
         if ($contents === false) {
-            throw new \LogicException();
+            throw new \RuntimeException("Missing recording file in $file");
         }
 
         $json = Json::decode($contents, true);
