@@ -20,8 +20,6 @@ parameters:
 services:
     errorFormatter.crossRepoUnusedPublic:
         class: staabm\CrossRepoUnusedPublic\Recorder\ErrorFormatter
-        arguments:
-            relativePathHelper: @simpleRelativePathHelper
 
 rules:
     - staabm\CrossRepoUnusedPublic\Recorder\CollectedDataRule
