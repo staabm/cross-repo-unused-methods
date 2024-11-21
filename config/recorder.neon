@@ -7,6 +7,7 @@ includes:
 parameters:
     customRulesetUsed: true
     errorFormat: crossRepoUnusedPublic
+    resultCachePath: %env.PHPSTAN_RESULT_CACHE_PATH%
 
     fileExtensions:
         - php
