@@ -21,6 +21,9 @@
 		"phpstan/phpstan-strict-rules": "^1.0",
 		"phpunit/phpunit": "^8.5|^9.5"
 	},
+	"conflict": {
+		"tomasvotruba/unused-public": "<1.0.1"
+	},
 	"autoload": {
 		"psr-4": {
 			"staabm\\CrossRepoUnusedPublic\\": "src/"
