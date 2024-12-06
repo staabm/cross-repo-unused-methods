@@ -14,15 +14,12 @@
 		"nette/robot-loader": "^4.0",
 		"nette/utils": "^4.0",
 		"phpstan/phpstan": "^1.0",
-		"tomasvotruba/unused-public": "^1.0"
+		"tomasvotruba/unused-public": "^1.0.1"
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "^1.4",
 		"phpstan/phpstan-strict-rules": "^1.0",
 		"phpunit/phpunit": "^8.5|^9.5"
-	},
-	"conflict": {
-		"tomasvotruba/unused-public": "<1.0.1"
 	},
 	"autoload": {
 		"psr-4": {
