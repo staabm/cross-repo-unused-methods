@@ -18,5 +18,5 @@ use TomasVotruba\UnusedPublic\Configuration;
 /**
  * @extends AbstractDataLoadingCollector<FuncCall, non-empty-array<string>|null>
  */
-final class CallUserFuncCollector extends AbstractDataLoadingCollector
+final class CallableTypeCollector extends AbstractDataLoadingCollector
 {}

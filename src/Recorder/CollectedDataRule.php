@@ -9,7 +9,7 @@ use PHPStan\Reflection\ReflectionProvider;
 use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\ShouldNotHappenException;
 use TomasVotruba\UnusedPublic\Collectors\Callable_\AttributeCallableCollector;
-use TomasVotruba\UnusedPublic\Collectors\Callable_\CallUserFuncCollector;
+use TomasVotruba\UnusedPublic\Collectors\Callable_\CallableTypeCollector;
 use TomasVotruba\UnusedPublic\Collectors\ClassConstFetchCollector;
 use TomasVotruba\UnusedPublic\Collectors\FormTypeClassCollector;
 use TomasVotruba\UnusedPublic\Collectors\MethodCall\MethodCallableCollector;
@@ -37,7 +37,7 @@ class CollectedDataRule implements \PHPStan\Rules\Rule
         StaticMethodCallCollector::class,
         StaticMethodCallableCollector::class,
         AttributeCallableCollector::class,
-        CallUserFuncCollector::class,
+        CallableTypeCollector::class,
         ClassConstFetchCollector::class,
         // PublicClassLikeConstCollector::class,
         // PublicClassMethodCollector::class,

@@ -60,6 +60,6 @@ services:
             - phpstan.collector
 
     -
-        class: TomasVotruba\UnusedPublic\Collectors\Callable_\CallUserFuncCollector
+        class: TomasVotruba\UnusedPublic\Collectors\Callable_\CallableTypeCollector
         tags:
             - phpstan.collector
