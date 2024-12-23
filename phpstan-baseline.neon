@@ -1,0 +1,61 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Cannot access offset class\-string\<staabm\\CrossRepoUnusedPublic\\Analyzer\\AbstractDataLoadingCollector\<TNodeType of PhpParser\\Node, TValue\>\> on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Analyzer/AbstractDataLoadingCollector.php
+
+		-
+			message: '#^Parameter \#2 \$array of function array_key_exists expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Analyzer/AbstractDataLoadingCollector.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Recorder/ErrorFormatter.php
+
+		-
+			message: '#^Parameter \#2 \.\.\.\$arrays of function array_merge expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Recorder/ErrorFormatter.php
+
+		-
+			message: '#^Cannot access offset 0 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/functions.php
+
+		-
+			message: '#^Cannot access offset 1 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/functions.php
+
+		-
+			message: '#^Cannot access offset 2 on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/functions.php
+
+		-
+			message: '#^Parameter \#1 \$stream of function fclose expects resource, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/functions.php
+
+		-
+			message: '#^Parameter \#1 \$stream of function stream_get_contents expects resource, mixed given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/functions.php
+
+		-
+			message: '#^Parameter &\$stderrOutput @param\-out type of function staabm\\CrossRepoUnusedPublic\\execCmd\(\) expects string, string\|false given\.$#'
+			identifier: paramOut.type
+			count: 1
+			path: src/functions.php
