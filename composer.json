@@ -37,7 +37,10 @@
 			"phpunit"
 		],
 		"phpstan": [
-			"phpstan analyse -c phpstan.neon.dist"
+			"phpstan analyse -c phpstan.neon"
+		],
+		"phpstan-baseline": [
+			"phpstan analyse -c phpstan.neon --generate-baseline phpstan-baseline.neon"
 		]
 	},
 	"config": {
