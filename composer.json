@@ -13,12 +13,12 @@
 		"php": "^7.4 || ^8.0",
 		"nette/robot-loader": "^4.0",
 		"nette/utils": "^4.0",
-		"phpstan/phpstan": "^1.0",
-		"tomasvotruba/unused-public": "^1.1"
+		"phpstan/phpstan": "^2.0",
+		"tomasvotruba/unused-public": "^2"
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "^1.4",
-		"phpstan/phpstan-strict-rules": "^1.0",
+		"phpstan/phpstan-strict-rules": "^2.0",
 		"phpunit/phpunit": "^8.5|^9.5"
 	},
 	"autoload": {
