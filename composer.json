@@ -14,8 +14,7 @@
 		"nette/robot-loader": "^4.0",
 		"nette/utils": "^4.0",
 		"phpstan/phpstan": "^1 || ^2",
-		"tomasvotruba/unused-public": "dev-prot",
-		"phpstan/phpstan": "^1.0",
+		"tomasvotruba/unused-public": "dev-prot"
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "^1.4",
