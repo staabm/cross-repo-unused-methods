@@ -1,0 +1,12 @@
+{
+  "require-dev": {
+    "staabm/cross-repo-unused-methods": "dev-protected",
+    "tomasvotruba/unused-public": "dev-prot"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/staabm/unused-public"
+    }
+  ]
+}
