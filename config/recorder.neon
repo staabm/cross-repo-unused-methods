@@ -1,5 +1,4 @@
 includes:
-    - phar://phpstan.phar/conf/bleedingEdge.neon # for speed
     - unused-public-params.neon
     - unused-public-services.neon
     - unused-public-collectors.neon
