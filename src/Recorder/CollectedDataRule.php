@@ -32,6 +32,7 @@ use function in_array;
 class CollectedDataRule implements \PHPStan\Rules\Rule
 {
     public const USAGE_COLLECTORS = [
+        // usage-side collectors
         MethodCallCollector::class,
         MethodCallableCollector::class,
         StaticMethodCallCollector::class,
@@ -39,12 +40,13 @@ class CollectedDataRule implements \PHPStan\Rules\Rule
         AttributeCallableCollector::class,
         CallableTypeCollector::class,
         ClassConstFetchCollector::class,
-        // PublicClassLikeConstCollector::class,
-        // PublicClassMethodCollector::class,
-        // PublicPropertyCollector::class,
         PublicPropertyFetchCollector::class,
         PublicStaticPropertyFetchCollector::class,
         FormTypeClassCollector::class,
+        // disable all declaration fetching collectors
+        // PublicClassLikeConstCollector::class,
+        // PublicClassMethodCollector::class,
+        // PublicPropertyCollector::class,
     ];
 
     public function getNodeType(): string
