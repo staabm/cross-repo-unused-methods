@@ -24,13 +24,7 @@ abstract class AbstractDataLoadingCollector implements Collector
 
     public function processNode(Node $node, Scope $scope): ?array // @phpstan-ignore-line
     {
-        static $once = [];
-
         $myClass = get_class($this);
-        if (array_key_exists($myClass, $once)) {
-            return [];
-        }
-        $once[$myClass] = true;
 
         $file = getcwd() . '/recording.json';
         $contents = file_get_contents($file);
