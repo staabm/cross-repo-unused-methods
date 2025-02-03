@@ -14,7 +14,7 @@
 		"nette/robot-loader": "^4.0",
 		"nette/utils": "^4.0",
 		"phpstan/phpstan": "^1 || ^2",
-		"tomasvotruba/unused-public": "^1 || ^2"
+		"tomasvotruba/unused-public": "dev-prot"
 	},
 	"require-dev": {
 		"php-parallel-lint/php-parallel-lint": "^1.4",
@@ -29,6 +29,12 @@
 			"src/functions.php"
 		]
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/staabm/unused-public"
+		}
+	],
 	"scripts": {
 		"csfix": [
 			"vendor/bin/ecs --ansi --fix"
